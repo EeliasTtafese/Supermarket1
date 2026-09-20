@@ -416,7 +416,7 @@ function setMode(m){
 }
 function fillParty(){
   const sel=$("party"); const list=mode==="SALE"?CUSTOMERS:VENDORS;
-  const ph=mode==="SALE"?"Walk-in customer":"Select vendor";
+  const ph=mode==="SALE"?"customer":"Select vendor";
   sel.innerHTML='<option value="">'+ph+'</option>'+list.map(n=>`<option>${n}</option>`).join("");
 }
 
