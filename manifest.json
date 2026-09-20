@@ -1,5 +1,5 @@
 {
-  "name": "Mobile POS with Inventory",
+  "name": "መተግበሪያ ለመፍተሔ",
   "short_name": "POS",
   "description": "Ring up sales on your phone. Reports flow to Excel.",
   "start_url": "./index.html",
