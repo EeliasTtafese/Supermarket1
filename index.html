@@ -335,9 +335,13 @@ let PRODUCTS=[], STOCK={}, CUSTOMERS=[], VENDORS=[];
 let activeCat="All", activeSub="All", cart=new Map(), curView="pos";
 
 const CAT_TILE = {
-  "Drinks & Beverages":"images/cat-drinks.svg","Breads & Cereals":"images/cat-breads.svg",
-  "Meats & Seafood":"images/cat-meats.svg","Dairy & Eggs":"images/cat-dairy.svg",
-  "Frozen Food":"images/cat-frozen.svg","Fruits & Vegetables":"images/cat-fruits.svg"
+  "Drinks & Beverages":"images/cat-drinks.svg",
+  "Breads & Cereals":"images/cat-breads.svg",
+  "Meats & Seafood":"images/cat-meats.svg",
+  "Dairy & Eggs":"images/cat-dairy.svg",
+  "Frozen Food":"images/cat-frozen.svg",
+  "Fruits & Vegetables":"images/cat-fruits.svg"
+  "መጠጦች":"images/cat-drink.svg",
 };
 const tileFor=(c)=>CAT_TILE[c]||"images/cat-drinks.svg";
 const imgFor=(p)=>(p.image_url&&String(p.image_url).trim())?p.image_url:tileFor(p.category);
@@ -349,7 +353,7 @@ const unitOf=(p)=> mode==="SALE" ? Number(p.sales_price) : Number(p.purchase_pri
     authError("⚠️ Add your Supabase URL and anon key to config.js first."); return;
   }
   sb = supabase.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY);
-  $("brandName").textContent=CFG.STORE_NAME||"Mobile POS";
+  $("brandName").textContent=CFG.STORE_NAME||"መተግበሪያ ለመፍትሔ";
   $("storeName").textContent=CFG.STORE_NAME||"Store";
   $("tTaxLbl").textContent=(CFG.TAX_NAME||"Tax")+" ("+(TAX*100).toFixed(2).replace(/\.00$/,'')+"%)";
   sb.auth.getSession().then(({data})=>{ if(data.session){ session=data.session; startApp(); }});
