@@ -335,13 +335,8 @@ let PRODUCTS=[], STOCK={}, CUSTOMERS=[], VENDORS=[];
 let activeCat="All", activeSub="All", cart=new Map(), curView="pos";
 
 const CAT_TILE = {
-  "Drinks & Beverages":"images/cat-drinks.svg",
-  "Breads & Cereals":"images/cat-breads.svg",
-  "Meats & Seafood":"images/cat-meats.svg",
-  "Dairy & Eggs":"images/cat-dairy.svg",
-  "Frozen Food":"images/cat-frozen.svg",
-  "Fruits & Vegetables":"images/cat-fruits.svg"
-  "መጠጦች":"images/cat-drink.svg",
+  "Drinks & Beverages":"images/cat-drinks.svg","Breads & Cereals":"images/cat-breads.svg","Meats & Seafood":"images/cat-meats.svg","Dairy & Eggs":"images/cat-dairy.svg",
+  "Frozen Food":"images/cat-frozen.svg","Fruits & Vegetables":"images/cat-fruits.svg"
 };
 const tileFor=(c)=>CAT_TILE[c]||"images/cat-drinks.svg";
 const imgFor=(p)=>(p.image_url&&String(p.image_url).trim())?p.image_url:tileFor(p.category);
